@@ -1,0 +1,13 @@
+<!--
+Thingstastic.com
+-->
+<svg>
+  <!--  Circle that changes color on topic value changes. This design tool friendly technique uses the
+        data-instrument custom attribute to specify instrumentation directives. In this example mapStyle
+        will be called in the element after the SVG loads and will setup the necessary callbacks to subscribe
+        to the MQTT topic "random/tempAlarm" and then update the circle style when values change.
+  -->
+  <circle id="temp_svg" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"
+    data-instrument="mapStyle('random/tempAlarm', {'normal':'green', 'alarm':'red'})"
+  />
+</svg>
